@@ -1,0 +1,17 @@
+var getUserRole = function(name, role){
+    switch(role){
+        case "admin":
+            return `${name} is an admin with all accesses`;
+            break;                                                     // here break is not required since return is being used;
+        case "subadmin":
+            return `${name} is a subadmin with read and write access`;
+            break;
+        case "user":
+            return `${name} is a user who can consume contents`;
+            break;
+        default:
+            return `${name} is a trial user`;
+    }
+}
+
+console.log(getUserRole("Yogesh", "admin"));
